@@ -7,7 +7,12 @@ export default [
     errorElement: <ErrorPage />,
   },
   {
-    path: '/another-page',
+    path: '/planning',
+    element: <Main />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/planning/another-page',
     element: <AnotherPage />,
     errorElement: <ErrorPage />,
   },
