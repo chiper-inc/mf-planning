@@ -37,3 +37,7 @@ declare module '*.svg' {
   const src: string;
   export default src;
 }
+
+declare module '@chiper/styleguide';
+
+declare module '@chiper/utility';
