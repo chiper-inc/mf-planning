@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
+import Map from '../../components/Map';
+import { MARKERS } from './data';
 
 export const GET_SERVER_STATUS = gql`
   query StatusServer {
@@ -16,7 +17,15 @@ const Main = () => {
   return (
     <div>
       <h3>Status server: {data.checkResult}</h3>
-      <Link to="/planning/another-page">Another page</Link>
+      <div style={{ width: '100%', height: 600 }}>
+        <Map
+          center={{
+            lat: MARKERS[0].lat,
+            lng: MARKERS[0].lng,
+          }}
+          markers={MARKERS}
+        />
+      </div>
     </div>
   );
 };
